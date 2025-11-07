@@ -1,0 +1,6 @@
+# dbt logs
+logs
+
+# macOS system file
+.DS_Store
+
