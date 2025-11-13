@@ -1,0 +1,20 @@
+models:
+  - name: staff
+    columns:
+      - name: staff_id
+        tests:
+          - unique
+          - not_null
+
+      - name: address_id
+        tests:
+          - not_null
+
+      - name: store_id
+        tests:
+          - not_null
+
+      - name: last_update
+        tests:
+          - not_null
+

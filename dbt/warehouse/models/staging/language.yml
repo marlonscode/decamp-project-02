@@ -1,0 +1,11 @@
+models:
+  - name: language
+    columns:
+      - name: language_id
+        tests:
+          - unique
+          - not_null
+
+      - name: last_update
+        tests:
+          - not_null

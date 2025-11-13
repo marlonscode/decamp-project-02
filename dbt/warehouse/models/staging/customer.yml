@@ -1,0 +1,19 @@
+models:
+  - name: customer
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+
+      - name: address_id
+        tests:
+          - not_null
+
+      - name: store_id
+        tests:
+          - not_null
+
+      - name: last_update
+        tests:
+          - not_null

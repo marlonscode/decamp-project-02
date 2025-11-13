@@ -1,0 +1,14 @@
+models:
+  - name: film_actor
+    columns:
+      - name: film_id
+        tests:
+          - not_null
+
+      - name: actor_id
+        tests:
+          - not_null
+
+      - name: last_update
+        tests:
+          - not_null

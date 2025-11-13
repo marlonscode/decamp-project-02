@@ -1,0 +1,18 @@
+models:
+  - name: inventory
+    columns:
+      - name: film_id
+        tests:
+          - not_null
+
+      - name: inventory_id
+        tests:
+          - not_null
+      
+      - name: store_id
+        tests:
+          - not_null
+
+      - name: last_update
+        tests:
+          - not_null

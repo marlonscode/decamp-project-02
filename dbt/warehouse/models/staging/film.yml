@@ -1,0 +1,11 @@
+models:
+  - name: film
+    columns:
+      - name: film_id
+        tests:
+          - unique
+          - not_null
+
+      - name: last_update
+        tests:
+          - not_null

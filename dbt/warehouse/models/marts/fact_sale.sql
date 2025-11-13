@@ -1,0 +1,52 @@
+{{
+    config(
+        materialized="table"
+    )
+}}
+
+with base_payment as (
+	select
+		payment.payment_id,
+	    payment.customer_id,
+	    customer.address_id as customer_address_id,
+	    payment.staff_id,
+	    staff.address_id as staff_address_id,
+	    store.store_id as store_id,
+        store.address_id as store_address_id,
+	    payment.rental_id,
+	    payment.amount,
+	    payment.payment_date
+	from {{ ref('payment') }} as payment
+	inner join {{ ref('staff') }} as staff on payment.staff_id = staff.staff_id
+	inner join {{ ref('store') }} as store on staff.store_id = store.store_id
+    inner join {{ ref('customer') }} as customer on customer.customer_id = payment.customer_id
+),
+
+base_rental as (
+	select
+		rental.rental_id,
+		rental.rental_date,
+		rental.inventory_id,
+		inventory.film_id,
+		rental.customer_id,
+		rental.return_date,
+		rental.staff_id,
+		rental.last_update
+	from {{ ref('rental') }}
+	inner join {{ ref('inventory') }} on rental.inventory_id = inventory.inventory_id
+)
+
+select
+	{{ dbt_utils.generate_surrogate_key(['base_payment.payment_id']) }} as payment_key,
+    {{ dbt_utils.generate_surrogate_key(['base_payment.customer_id']) }} as customer_key,
+    {{ dbt_utils.generate_surrogate_key(['base_payment.customer_address_id']) }} as customer_address_key,
+    {{ dbt_utils.generate_surrogate_key(['base_payment.staff_id']) }} as staff_key,
+    {{ dbt_utils.generate_surrogate_key(['base_payment.staff_address_id']) }} as staff_address_key,
+    {{ dbt_utils.generate_surrogate_key(['base_payment.store_id']) }} as store_key,
+    {{ dbt_utils.generate_surrogate_key(['base_payment.store_address_id']) }} as store_address_key,
+    {{ dbt_utils.generate_surrogate_key(['base_payment.film_id']) }} as film_key,
+    {{ dbt_utils.generate_surrogate_key(['base_payment.inventory_id']) }} as inventory_key,
+	base_payment.amount,
+	base_payment.payment_date
+from base_payment
+inner join base_rental on base_payment.rental_id = base_rental.rental_id

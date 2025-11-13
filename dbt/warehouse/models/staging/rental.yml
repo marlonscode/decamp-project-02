@@ -1,0 +1,23 @@
+models:
+  - name: rental
+    columns:
+      - name: rental_id
+        tests:
+          - unique
+          - not_null
+
+      - name: customer_id
+        tests:
+          - not_null
+
+      - name: staff_id
+        tests:
+          - not_null
+      
+      - name: inventory_id
+        tests:
+          - not_null
+
+      - name: last_update
+        tests:
+          - not_null

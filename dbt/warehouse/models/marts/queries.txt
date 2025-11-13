@@ -1,0 +1,10 @@
+NB: ADD date dim table
+
+What do I want in my dashboard?
+
+- total_customers_by_district_city
+- total_films_by_genre
+- total_revenue_by_district_city_last_12_months
+- total_revenue_by_film_last_12_months
+- total_revenue_by_store_last_12_months
+- total_revenue_last_12_months
