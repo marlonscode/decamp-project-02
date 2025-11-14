@@ -9,7 +9,6 @@ select
 	first_name,
 	last_name,
 	email,
-	address_id,
 	store_id,
 	last_update
 from {{ ref('staff') }}

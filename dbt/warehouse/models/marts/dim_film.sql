@@ -15,7 +15,7 @@ select
 	film.rental_rate,
 	film.replacement_cost,
 	film.last_update
-from {{ ref('film') }}
-inner join {{ ref('film_category') }} on film.film_id = film_category.film_id
-inner join {{ ref('catgory') }} on category.category_id = film_category.category_id
-inner join {{ ref('language') }} on language.language_id = film.language_id
+from {{ ref('film') }} as film
+inner join {{ ref('film_category') }} as film_category on film.film_id = film_category.film_id
+inner join {{ ref('catgory') }} as category on category.category_id = film_category.category_id
+inner join {{ ref('language') }} as language on language.language_id = film.language_id

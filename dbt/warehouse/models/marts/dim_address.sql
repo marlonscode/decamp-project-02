@@ -11,6 +11,6 @@ select
 	city.city as city,
 	country.country as country,
 	address.last_update
-from {{ ref('address') }}
-inner join {{ ref('city') }} on city.city_id = address.city_id
-inner join {{ ref('country') }} on country.country_id = city.country_id
+from {{ ref('address') }} as address
+inner join {{ ref('city') }} as city on city.city_id = address.city_id
+inner join {{ ref('country') }} as country on country.country_id = city.country_id
