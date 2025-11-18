@@ -72,9 +72,11 @@ The following tools / techniques were used in this project:
 
 ## Screenshots
 
-<img src="images/erd.png" alt="Description" width="700" />
-Figure 2: Kimball model for DVD dataset
+<img src="images/dashboard.png" alt="Description" width="700" />
+Figure 2: Preset dashboard for DVD dataset
 
+<img src="images/erd.png" alt="Description" width="700" />
+Figure 3: Kimball model for DVD dataset
 
 <img src="images/dag.png" alt="Description" width="700" />
-Figure 3: `dbt` DAG for data warehouse
+Figure 4: `dbt` DAG for data warehouse
