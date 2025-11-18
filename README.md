@@ -14,9 +14,9 @@
 
 
 ## Introduction
-The aim of this project is to build an end-to-end data pipeline using Big Data processing technologies. The project uses data from a ficticious DVD rental store, and covers all stages of the Data Engineering Lifecycle: Generation, Ingestion, Storage, Transformation and Serving. Snowflake was used as the data platform of choice.
+The aim of this project is to build an end-to-end data pipeline using Big Data processing technologies. The project uses data from a ficticious DVD rental store, and covers all stages of the Data Engineering Lifecycle: Generation, Ingestion, Storage, Transformation and Serving (including a dashboard). Snowflake was used as the data platform of choice.
 
-The project takes data all the way through from generation to serving (including a dashboard). Various data modelling techniques were used in order to answer the following business questions:
+Various data modelling techniques were used in order to answer the following business questions:
 1. What is the total number of rentals?
 2. What is the average price a customer pays to rent a DVD?
 3. What is the daily revenue over the last month?
