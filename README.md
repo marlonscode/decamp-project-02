@@ -1,7 +1,5 @@
 # big-data-processing-project 🚀
 
-<img src="images/dashboard.png" alt="Description" width="700" />
-
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -74,6 +72,9 @@ The following tools / techniques were used in this project:
 - Data visualisation (Preset dashboard)
 
 ## Screenshots
+
+<img src="images/dashboard.png" alt="Description" width="700" />
+Figure 2: Preset dashboard for DVD dataset
 
 <img src="images/erd.png" alt="Description" width="700" />
 Figure 3: Kimball model for DVD dataset
