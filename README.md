@@ -28,7 +28,7 @@ Various data modelling techniques were used in order to answer the following bus
 
 ![images/architecture.png](images/architecture.png)
 
-<img src="images/architecture.png" alt="Description" width="300" />
+<img src="images/architecture.png" alt="Description" width="600" />
 
 
 **Figure 1**: Solution architecture
