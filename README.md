@@ -25,7 +25,9 @@ Various data modelling techniques were used in order to answer the following bus
 
 
 ## Solution Architecture
+
 ![images/architecture.png](images/architecture.png)
+
 **Figure 1**: Solution architecture
 
 
