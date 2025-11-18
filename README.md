@@ -1,4 +1,4 @@
-# big-data-processing-project
+# big-data-processing-project 🚀
 
 ## Table of Contents
 - [Introduction](#introduction)
