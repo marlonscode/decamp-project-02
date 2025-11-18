@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: dim_staff
+    columns:
+      - name: staff_key
+        description: "Surrogate key for the staff dimension."
+        tests:
+          - unique
+          - not_null
+
+      - name: staff_first_name
+        description: "The first name of the staff member."
+
+      - name: staff_last_name
+        description: "The last name of the staff member."
+
+      - name: staff_email
+        description: "The email address of the staff member."

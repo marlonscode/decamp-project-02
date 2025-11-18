@@ -17,3 +17,12 @@ models:
       - name: staff_id
         tests:
           - not_null
+
+      - name: amount
+        data_tests:
+          - not_null
+          - equal_or_greater_than:
+              value: 0
+
+
+     

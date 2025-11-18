@@ -6,10 +6,10 @@
 
 select
 	{{ dbt_utils.generate_surrogate_key(['film.film_id']) }} as film_key,
-	film.title,
-	category.name as category,
-	film.release_year,
-	film.rating,
+	film.title as film_title,
+	category.name as film_category,
+	film.release_year as film_release_year,
+	film.rating as film_rating,
 	language.name as language,
 	film.rental_duration,
 	film.rental_rate,
@@ -17,5 +17,5 @@ select
 	film.last_update
 from {{ ref('film') }} as film
 inner join {{ ref('film_category') }} as film_category on film.film_id = film_category.film_id
-inner join {{ ref('catgory') }} as category on category.category_id = film_category.category_id
+inner join {{ ref('category') }} as category on category.category_id = film_category.category_id
 inner join {{ ref('language') }} as language on language.language_id = film.language_id

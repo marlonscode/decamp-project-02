@@ -1,4 +1,4 @@
-FROM ghcr.io/dbt-labs/dbt-snowflake:1.7.1
+FROM ghcr.io/dbt-labs/dbt-snowflake:1.9.0
 
 COPY . .
 

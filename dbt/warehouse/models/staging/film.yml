@@ -6,6 +6,17 @@ models:
           - unique
           - not_null
 
+      - name: title
+        tests:
+          - not_null
+          - non_empty_string
+
+      - name: release_year
+        tests:
+          - not_null
+          - first_digit_in_list:
+              allowed_digits: [1,2]
+      
       - name: last_update
         tests:
           - not_null

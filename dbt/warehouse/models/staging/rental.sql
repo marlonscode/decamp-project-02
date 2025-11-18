@@ -15,7 +15,9 @@ select
     return_date,
     last_update
 from {{ source('dvd_rental', 'rental') }}
+
 {% if is_incremental() %}
     where last_update > (select max(last_update) from {{ this }} ) - interval '48 hours'
 {% endif %}
+
 order by rental_date

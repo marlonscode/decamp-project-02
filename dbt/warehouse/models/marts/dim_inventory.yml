@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: dim_inventory
+    columns:
+      - name: inventory_key
+        description: "Surrogate key for the inventory dimension."
+        tests:
+          - unique
+          - not_null
+
+      - name: inventory_film_id
+        description: "The natural key of the inventory item."
+
+      - name: store_id
+        description: "The identifier of the store where this inventory item is located."
+
+      - name: film_title
+        description: "The title of the film associated with this inventory item."

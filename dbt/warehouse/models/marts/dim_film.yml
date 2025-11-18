@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: dim_film
+    columns:
+      - name: film_key
+        description: "Surrogate key for the film dimension."
+        tests:
+          - unique
+          - not_null
+
+      - name: film_title
+        description: "The title of the film."
+
+      - name: film_category
+        description: "The category or genre of the film."
+
+      - name: film_release_year
+        description: "The year the film was released."
+
+      - name: film_rating
+        description: "The rating of the film."
+
+      - name: language
+        description: "The language of the film."
+
+      - name: rental_duration
+        description: "The duration for which the film can be rented."
+
+      - name: rental_rate
+        description: "The rate at which the film can be rented."
+
+      - name: replacement_cost
+        description: "The cost to replace the film."

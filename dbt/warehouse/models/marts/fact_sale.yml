@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: fact_sale
+    columns:
+      - name: sale_key
+        description: "Surrogate key for the fact sale table."
+        tests:
+          - unique
+          - not_null
+
+      - name: customer_key
+        description: "Foreign key to the customer dimension."
+
+      - name: customer_address_key
+        description: "Foreign key to the customer address dimension."
+
+      - name: staff_key
+        description: "Foreign key to the staff dimension."
+
+      - name: store_key
+        description: "Foreign key to the store dimension."
+
+      - name: film_key
+        description: "Foreign key to the film dimension."
+
+      - name: inventory_key
+        description: "Foreign key to the inventory dimension."
+
+      - name: payment_amount
+        description: "The amount paid in the sale."
+
+      - name: payment_date
+        description: "The date of the payment associated with this sale."

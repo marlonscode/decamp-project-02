@@ -1,6 +1,8 @@
 {{
     config(
-        materialized="table",
+        materialized="incremental",
+        unique_key=["payment_id"],
+        incremental_strategy="delete+insert"
     )
 }}
 
@@ -12,4 +14,10 @@ select
     amount,
     payment_date
 from {{ source('dvd_rental', 'payment') }}
+
+{% if is_incremental() %}
+    where payment_date > (select max(payment_date) from {{ this }} ) - interval '48 hours'
+{% endif %}
+
+
 

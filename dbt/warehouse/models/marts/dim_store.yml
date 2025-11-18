@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: dim_store
+    columns:
+      - name: store_key
+        description: "Surrogate key for the store dimension."
+        tests:
+          - unique
+          - not_null
+
+      - name: manager_staff_id
+        description: "The identifier of the store manager."
+
+      - name: last_update
+        description: "Timestamp of the last update to this record."
+        tests:
+          - not_null
