@@ -26,10 +26,7 @@ Various data modelling techniques were used in order to answer the following bus
 
 ## Solution Architecture
 
-![images/architecture.png](images/architecture.png)
-
 <img src="images/architecture.png" alt="Description" width="700" />
-
 
 **Figure 1**: Solution architecture
 
@@ -76,10 +73,10 @@ The following tools / techniques were used in this project:
 
 ## Screenshots
 
-![images/erd.png](images/erd.png)
+<img src="images/erd.png" alt="Description" width="700" />
 
 **Figure 2**: Kimball model for DVD dataset
 
-![images/dag.png](images/dag.png)
+<img src="images/dag.png" alt="Description" width="700" />
 
 **Figure 3**: `dbt` DAG for data warehouse
